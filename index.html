@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Galerie photo de paysages, portraits et architecture — une exposition visuelle élégante."
+    />
+    <meta
+      name="keywords"
+      content="galerie photo, photographie, paysages, portraits, architecture, exposition"
+    />
+    <title>L1IG-1 ESGAE— Galerie Photo</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles personnalisés -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav>
+      <a href="#" class="nav-logo">GALERIE</a>
+      <div class="nav-links">
+        <a href="#galerie" class="active">Galerie</a>
+        <a href="#albums">Albums</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="accueil">
+      <div class="hero-grid-bg">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Exposition photographique</p>
+        <h1>La <em>lumière</em><br />révèle tout</h1>
+        <p class="hero-sub">
+          Une collection de moments capturés entre ombre et clarté. Paysages,
+          architecture — chaque image raconte une histoire silencieuse.
+        </p>
+      </div>
+      <div class="hero-scroll">Défiler</div>
+    </section>
+
+    <!-- ── GALERIE ── -->
+    <section id="galerie">
+      <div class="section-header fade-in">
+        <p class="section-label">Collection BRAZZAVILLE</p>
+        <h2 class="section-title">Toutes les photos</h2>
+      </div>
+
+      <!-- Filtres -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterGallery('tous', this)">
+          Tous
+        </button>
+        <button class="filter-btn" onclick="filterGallery('paysage', this)">
+          Paysages
+        </button>
+        <button class="filter-btn" onclick="filterGallery('portrait', this)">
+          Portraits
+        </button>
+        <button
+          class="filter-btn"
+          onclick="filterGallery('architecture', this)"
+        >
+          Architecture
+        </button>
+        <button class="filter-btn" onclick="filterGallery('nature', this)">
+          Nature
+        </button>
+      </div>
+
+      <div class="gallery-section">
+        <div class="gallery-grid" id="gallery">
+          <div
+            class="photo-card"
+            data-cat="paysage"
+            data-title="Brume de montagne"
+            data-desc="Aube dans les Alpes suisses, vallée de Lauterbrunnen, juin 2024."
+            data-date="12 juin 2024"
+            data-id="1"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.10.45.jpeg"
+              alt="Brume de montagne dans les Alpes au lever du soleil"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">EGLISE St ANE Poto Poto</div>
+              <div class="photo-meta">Paysage</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.10.45.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="portrait"
+            data-title="ESGAE"
+            data-desc="Portrait en lumière naturelle, studio Paris, printemps 2024."
+            data-date="3 mars 2024"
+            data-id="2"
+            onclick="openModal(this)"
+          >
+            <img
+              src="Screenshot_20260415-112453.jpg"
+              alt="Portrait féminin en lumière naturelle douce"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">ESGAE MOUKONDO</div>
+              <div class="photo-meta">Paysage</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="Screenshot_20260415-112453.jpg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="architecture"
+            data-title="Géométries urbaines"
+            data-desc="Immeubles haussmanniens vus du dessus, Paris 2024."
+            data-date="18 avr. 2024"
+            data-id="3"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.04.47.jpeg"
+              alt="Toits parisiens et géométrie urbaine vue aérienne"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Géométries urbaines</div>
+              <div class="photo-meta">Architecture · BRAZZAVILLE</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.04.47.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="nature"
+            data-title="Forêt ancienne"
+            data-desc="Sous-bois mystérieux en automne, forêt de Fontainebleau."
+            data-date="22 oct. 2024"
+            data-id="4"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.10.05.jpeg"
+              alt="Sous-bois automnal avec rayons de lumière filtrant entre les arbres"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Urbaines</div>
+              <div class="photo-meta">Architecture BRAZZAVILLE</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.10.05.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="paysage"
+            data-title="Horizon nordique"
+            data-desc="Fiords norvégiens sous ciel dramatique, août 2024."
+            data-date="5 août 2024"
+            data-id="5"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.10.23.jpeg"
+              alt="Fiords norvégiens avec reflets dans l'eau au coucher du soleil"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title"></div>
+              <div class="photo-meta">Paysage · Norvège</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.10.23.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="portrait"
+            data-title="L'artiste"
+            data-desc="Portrait documentaire en atelier, Lyon, février 2024."
+            data-date="14 fév. 2024"
+            data-id="6"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.03.46.jpeg"
+              alt="Portrait documentaire d'une artiste dans son atelier"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">pont du 15 Aout</div>
+              <div class="photo-meta">Documentaire</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.03.46.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="paysage"
+            data-title="Désert de sel"
+            data-desc="Salar d'Uyuni, Bolivie — miroir infini, juillet 2024."
+            data-date="30 juil. 2024"
+            data-id="7"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.39.27.jpeg"
+              alt="Salar d'Uyuni en Bolivie reflétant le ciel nuageux"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">tour jumelle</div>
+              <div class="photo-meta">Paysage · BRAZZAVILLE</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.39.27.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="architecture"
+            data-title="Béton brut"
+            data-desc="Brutalisme architecturale, Centre Pompidou, Paris."
+            data-date="9 janv. 2024"
+            data-id="8"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.39.04.jpeg"
+              alt="Architecture brutaliste avec structures métalliques en acier"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Aeroport de BRAZZAVILLE</div>
+              <div class="photo-meta">Architecture</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.39.04.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="nature"
+            data-title="Cascade bleue"
+            data-desc="Chutes islandaises, rivière Öxará, septembre 2024."
+            data-date="17 sept. 2024"
+            data-id="9"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.38.36.jpeg"
+              alt="Cascade de montagne islandaise avec eau turquoise"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Aeroport MAYA MAYA</div>
+              <div class="photo-meta">Architecture</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.38.36.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="architecture"
+            data-title="Symétrie"
+            data-desc="Couloirs du musée d'Orsay — perspective architecturale, Paris."
+            data-date="28 fév. 2024"
+            data-id="10"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.36.27.jpeg"
+              alt="Symétrie architecturale dans un couloir de musée avec plafond décoratif"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Stade de Kintele</div>
+              <div class="photo-meta">Architecture · stade</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="WhatsApp Image 2026-05-11 at 15.36.27.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="nature"
+            data-title="Prairie dorée"
+            data-desc="Champ de lavande en fleurs, Provence, juillet 2024."
+            data-date="11 juil. 2024"
+            data-id="11"
+            onclick="openModal(this)"
+          >
+            <img
+              src="FB_IMG_17657012678828375.jpg (1).jpeg"
+              alt="Champs de lavande violette en Provence au coucher du soleil"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Animal</div>
+              <div class="photo-meta">Nature · Provence</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="FB_IMG_17657012678828375.jpg (1).jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="portrait"
+            data-title="Confidence"
+            data-desc="Portrait en noir et blanc, série intimiste, mars 2024."
+            data-date="20 mars 2024"
+            data-id="12"
+            onclick="openModal(this)"
+          >
+            <img
+              src="FB_IMG_17781954725685015.jpg.jpeg"
+              alt="Portrait masculin en noir et blanc dans un éclairage dramatique"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Confidence</div>
+              <div class="photo-meta">Portrait</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="FB_IMG_17781954725685015.jpg.jpeg"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="paysage"
+            data-title="Aurore boréale"
+            data-desc="Nuit magique au-dessus du lac Torneträsk, Laponie."
+            data-date="2 janv. 2024"
+            data-id="13"
+            onclick="openModal(this)"
+          >
+            <img
+              src="FB_IMG_17768103269582527.jpg.jpeg"
+              alt="Aurore boréale verte se reflétant dans un lac arctique"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">Aurore boréale</div>
+              <div class="photo-meta">Paysage · Laponie</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a class="photo-btn" href="#" download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="photo-card"
+            data-cat="architecture"
+            data-title="Tour de verre"
+            data-desc="Reflets dans la façade d'un gratte-ciel londonien, mai 2024."
+            data-date="15 mai 2024"
+            data-id="14"
+            onclick="openModal(this)"
+          >
+            <img
+              src="WhatsApp Image 2026-05-11 at 22.07.51 (1).jpeg"
+              alt="Reflets dans la façade en verre d'un gratte-ciel moderne"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-title">5-0</div>
+              <div class="photo-meta">paysages</div>
+            </div>
+            <div class="photo-actions">
+              <span class="photo-btn"
+                ><i class="bi bi-arrows-fullscreen"></i
+              ></span>
+              <a
+                class="photo-btn"
+                href="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90"
+                download
+                ><i class="bi bi-download"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ALBUMS ── -->
+    <section id="albums" class="albums-section">
+      <div class="section-header" style="padding: 0 0 3rem">
+        <p class="section-label">Organisés par thème</p>
+        <h2 class="section-title">Albums</h2>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="album-card">
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.10.45.jpeg"
+              alt="Album paysages — la ville de BRAZZAVILLE"
+              loading="lazy"
+            />
+            <div class="album-info">
+              <div class="album-name">Paysages</div>
+              <div class="album-count">5 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="album-card">
+            <img
+              src="FB_IMG_17781954725685015.jpg.jpeg"
+              alt="Album portraits — couverture portrait féminin"
+              loading="lazy"
+            />
+            <div class="album-info">
+              <div class="album-name">Portraits</div>
+              <div class="album-count">3 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="album-card">
+            <img
+              src="WhatsApp Image 2026-05-11 at 15.04.47.jpeg"
+              alt="Album architecture — couverture toits parisiens"
+              loading="lazy"
+            />
+            <div class="album-info">
+              <div class="album-name">Architecture</div>
+              <div class="album-count">4 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="album-card">
+            <img
+              src="FB_IMG_17657012678828375.jpg (1).jpeg"
+              alt="Album nature — crocodile du park"
+              loading="lazy"
+            />
+            <div class="album-info">
+              <div class="album-name">Nature</div>
+              <div class="album-count">3 photos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── À PROPOS ── -->
+    <section id="about" class="about-section">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="about-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80"
+              alt="Photographe avec appareil photo en train de travailler"
+            />
+            <div class="about-img-border"></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <p class="section-label">Le photographe</p>
+          <h2 class="section-title" style="margin-bottom: 1.5rem">À propos</h2>
+          <p class="about-text">
+            Ce projet créer par le groupe N°7: THE GHOST
+            <li>
+              <ul>
+                OBOUKA Martial E
+              </ul>
+              <ul>
+                SAMBA Réné
+              </ul>
+              <ul>
+                NTSIETE Dominique
+              </ul>
+              <ul>
+                MAKANGA Godlin
+              </ul>
+              <ul>
+                Clever TATY
+              </ul>
+            </li>
+          </p>
+          <p class="about-text">
+            Chaque image est une tentative de figer le temps, de révéler la
+            beauté cachée dans l'ordinaire. Mon œil cherche le contraste, la
+            texture, la profondeur.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="contact-section">
+      <div class="contact-inner">
+        <p class="section-label" style="justify-content: center">
+          Restons en contact
+        </p>
+        <h2 class="section-title" style="margin-bottom: 1rem">Contact</h2>
+        <p class="contact-desc">
+          Pour plus d'information sur la conception du cite, cliquer sur le lien
+        </p>
+        <a href="martialobouka@gmail.com" class="contact-link">
+          <i class="bi bi-envelope"></i>
+          martialobouka@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- ── MODAL ── -->
+    <div
+      class="modal fade"
+      id="photoModal"
+      tabindex="-1"
+      aria-label="Photo agrandie"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fermer"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-img-wrapper">
+              <img id="modalImg" src="" alt="" />
+            </div>
+            <div class="modal-info">
+              <div>
+                <div class="modal-category" id="modalCat"></div>
+                <div class="modal-desc" id="modalDesc"></div>
+              </div>
+              <div style="text-align: right">
+                <div class="modal-date" id="modalDate"></div>
+                <a
+                  id="modalDownload"
+                  href="#"
+                  download
+                  class="btn-download mt-2"
+                >
+                  <i class="bi bi-download"></i> Télécharger
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const imgMap = {
+        1: "WhatsApp Image 2026-05-11 at 15.10.45.jpeg",
+        2: "Screenshot_20260415-112453.jpg",
+        3: "WhatsApp Image 2026-05-11 at 15.04.47.jpeg",
+        4: "WhatsApp Image 2026-05-11 at 15.10.05.jpeg",
+        5: "WhatsApp Image 2026-05-11 at 15.10.23.jpeg",
+        6: "WhatsApp Image 2026-05-11 at 15.03.46.jpeg",
+        7: "WhatsApp Image 2026-05-11 at 15.39.27.jpeg",
+        8: "WhatsApp Image 2026-05-11 at 15.39.04.jpeg",
+        9: "WhatsApp Image 2026-05-11 at 15.38.36.jpeg",
+        10: "WhatsApp Image 2026-05-11 at 15.36.27.jpeg",
+        11: "FB_IMG_17657012678828375.jpg (1).jpeg",
+        12: "FB_IMG_17781954725685015.jpg.jpeg",
+        13: "FB_IMG_17768103269582527.jpg.jpeg",
+        14: "WhatsApp Image 2026-05-11 at 22.07.51 (1).jpeg",
+      };
+
+      function filterGallery(cat, btn) {
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        document.querySelectorAll(".photo-card").forEach((card) => {
+          const match = cat === "tous" || card.dataset.cat === cat;
+          card.style.opacity = match ? "1" : "0.15";
+          card.style.pointerEvents = match ? "auto" : "none";
+          card.style.transition = "opacity 0.4s, transform 0.4s";
+        });
+      }
+
+      function openModal(card) {
+        const id = card.dataset.id;
+        document.getElementById("modalTitle").textContent = card.dataset.title;
+        document.getElementById("modalCat").textContent =
+          card.querySelector(".photo-meta").textContent;
+        document.getElementById("modalDesc").textContent = card.dataset.desc;
+        document.getElementById("modalDate").textContent = card.dataset.date;
+        document.getElementById("modalImg").src = imgMap[id];
+        document.getElementById("modalImg").alt = card.querySelector("img").alt;
+        document.getElementById("modalDownload").href = imgMap[id];
+        new bootstrap.Modal(document.getElementById("photoModal")).show();
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
